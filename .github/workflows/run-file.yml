@@ -1,0 +1,24 @@
+name: Run Python Script
+
+on:
+  push:
+    branches:
+      - main # Trigger on push to the main branch
+      - master # Also trigger if your default branch is 'master'
+  workflow_dispatch: # Allow manual trigger from the Actions tab
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest # Use a GitHub-hosted Ubuntu runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Get your repository code onto the runner
+
+      - name: Set up Python
+        uses: actions/setup-python@v5 # Install Python environment
+        with:
+          python-version: '3.x' # Use the latest 3.x version
+
+      - name: Run hello.py
+        run: python hello.py # Execute your Python script
