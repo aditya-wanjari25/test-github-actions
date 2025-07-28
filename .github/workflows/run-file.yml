@@ -22,3 +22,6 @@ jobs:
 
       - name: Run hello.py
         run: python home.py # Execute your Python script
+    
+      - name: Run chat.py
+        run: python chat.py
