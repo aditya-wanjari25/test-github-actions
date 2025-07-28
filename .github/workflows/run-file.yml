@@ -21,4 +21,4 @@ jobs:
           python-version: '3.x' # Use the latest 3.x version
 
       - name: Run hello.py
-        run: python hello.py # Execute your Python script
+        run: python home.py # Execute your Python script
